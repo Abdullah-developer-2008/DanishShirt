@@ -191,6 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
     // 3. Close menu if window is resized above mobile width
     window.addEventListener('resize', () => {
         if (window.innerWidth > 992) {

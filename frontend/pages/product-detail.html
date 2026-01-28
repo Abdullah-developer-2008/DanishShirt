@@ -511,11 +511,12 @@
     const slides = document.querySelectorAll('.slider-track img');
 
     let index = 0;
-
+if (nextBtn) {
     nextBtn.addEventListener('click', () => {
         index = (index + 1) % slides.length;
         updateSlider();
     });
+}
 
     prevBtn.addEventListener('click', () => {
         index = (index - 1 + slides.length) % slides.length;

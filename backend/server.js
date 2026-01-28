@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/send-order', (req, res) => {
+app.post('/api/send-order', (req, res) => {
     const { product, qty, price, color, instructions, email, phone, img } = req.body;
 
     const mailOptions = {
@@ -54,7 +54,7 @@ const multer = require('multer');
 const upload = multer({ storage: multer.memoryStorage() }); // Keep image in memory for email
 
 // Add this to your server.js
-app.post('/custom-design', upload.single('designFile'), (req, res) => {
+app.post('/api/custom-design', upload.single('designFile'), (req, res) => {
     const { userName, email, phone, colorStyle, description } = req.body;
     const file = req.file;
 
@@ -92,7 +92,7 @@ app.post('/custom-design', upload.single('designFile'), (req, res) => {
 });
 
 // Add this route to your server.js
-app.post('/bulk-order', (req, res) => {
+app.post('/api/bulk-order', (req, res) => {
     const { clientName, companyName, email, phone, quantity, message } = req.body;
 
     const mailOptions = {
