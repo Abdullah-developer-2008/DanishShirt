@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | KRAFT ELITE Manufacturing</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/product.css">
+</head>
+
+<body>
+
+    <div class="sidebar-header">
+        <h4>Filters</h4>
+        <button id="clearFilters" class="clear-btn">Clear All</button>
+    </div>
+
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">✧</span> Danish<span class="logo-thin">Shirt</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/product.html">Products</a></li>
+                <li><a href="../index.html" id="nav-custom">Customization</a></li>
+                <li><a href="../index.html">Bulk Orders</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="product-page-layout">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="filter-checkbox" id="corporate" value="corporate">
+                        <label for="corporate">Corporate Apparel</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="filter-checkbox" id="industrial" value="industrial">
+                        <label for="industrial">IndustrialUniforms</label>
+                    </li>
+                    <li><input type="checkbox" class="filter-checkbox" value="football"> Football</li>
+                    <li><input type="checkbox" class="filter-checkbox" value="cricket"> Cricket</li>
+                    <li><input type="checkbox" class="filter-checkbox" value="basketball"> Basketball</li>
+                    <li><input type="checkbox" class="filter-checkbox" value="hockey"> Hockey</li>
+                    <li><input type="checkbox" class="filter-checkbox" value="formal"> FormalWear</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Printing Tech</h4>
+                <ul>
+                    <li><input type="checkbox" class="tech-checkbox" id="tech1" value="sublimation"><label
+                            for="tech1">Sublimation</label></li>
+                    <li><input type="checkbox" class="tech-checkbox" id="tech2" value="screenprint"><label
+                            for="tech2">Screen Print</label></li>
+                    <li><input type="checkbox" class="tech-checkbox" id="tech3" value="dtf"><label for="tech3">DTF
+                            Transfer</label></li>
+                    <li><input type="checkbox" class="tech-checkbox" id="tech4" value="embroidery"><label
+                            for="tech4">Embroidery</label></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Price Range</h4>
+                <div class="price-filter">
+                    <input type="range" min="10" max="1000" value="500">
+                    <div class="range-labels"><span>$10</span><span>$1000</span></div>
+                </div>
+            </div>
+        </aside>
+        <main class="product-feed">
+            <div class="feed-header">
+                <h2>All Products <span>(24 Items)</span></h2>
+                <select class="sort-dropdown">
+                    <option>Sort by: Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Newest Arrivals</option>
+                </select>
+            </div>
+
+            <div class="product-grid-main" id="productGrid">
+                <div class="product-card" data-category="football" data-tech="sublimation" data-price="5.00">
+                    <div class="product-img">
+                        <img src="../images/shirt1/s1.webp" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p>
+                        <button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt1/s1.webp', '../images/shirt1/s2.png', '../images/shirt1/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="football" data-tech="screenprint" data-price="2.00">
+                    <div class="product-img"><img src="../images/shirt2/s1.webp" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p>
+                        <button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt2/s1.webp', '../images/shirt2/s2.png', '../images/shirt2/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="football" data-tech="embroidery" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt3/s1.webp" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p>
+                        <button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt3/s1.webp', '../images/shirt3/s2.png', '../images/shirt3/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="cricket" data-tech="dtf" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt4/s1.png" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>Elite Cricket Performance Jersey</h3>
+                        <p>This isn't just a shirt; it’s a high-performance garment built to withstand the rigors of a
+                            long day in the field or a high-intensity session at the crease.</p>
+                        <button class="view-btn"
+                            onclick="goToDetail('Elite Cricket Performance Jersey', 'Sportswear', '5.00', '../images/shirt4/s1.png', '../images/shirt4/s2.png', '../images/shirt4/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="football" data-tech="embroidery" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt5/s1.webp" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt5/s1.webp', '../images/shirt5/s2.png', '../images/shirt5/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="football" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt6/s1.avif" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt6/s1.avif', '../images/shirt6/s2.png', '../images/shirt6/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card hidden" data-category="football" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt7/s1.png" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt7/s1.png', '../images/shirt7/s2.png', '../images/shirt7/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="IndustrialUniforms" data-tech="screenprint"
+                    data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt8/s1.webp" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt8/s1.webp', '../images/shirt8/s2.png', '../images/shirt8/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="FormalWear" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt9/s1.webp" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt9/s1.webp', '../images/shirt9/s2.png', '../images/shirt9/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="football" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt10/s1.jpeg" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt10/s1.jpeg', '../images/shirt10/s2.png', '../images/shirt10/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="football" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt11/s1.avif" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt10/s1.avif', '../images/shirt10/s2.png', '../images/shirt10/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="football" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt12/s1.avif" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt12/s1.avif', '../images/shirt12/s2.png', '../images/shirt12/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="football" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt13/s1.jpeg" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt13/s1.jpeg', '../images/shirt13/s2.jpeg', '../images/shirt13/s3.jpeg')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="football" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt14/s1.jpeg" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt14/s1.jpeg', '../images/shirt14/s2.jpeg')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="football" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt15/s1.jpeg" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt15/s1.jpeg', '../images/shirt15/s2.jpeg', '../images/shirt15/s3.jpeg')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="cricket" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt16/s1.webp" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt16/s1.webp', '../images/shirt16/s2.png', '../images/shirt16/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="basketball" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt17/s1.png" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt17/s1.png', '../images/shirt17/s2.png', '../images/shirt17/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card hidden" data-category="hockey" data-tech="screenprint" data-price="25.00">
+                    <div class="product-img"><img src="../images/shirt18/s1.webp" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Apex Performance Jersey</h3>
+                        <p>Engineered for those who demand excellence</p><button class="view-btn"
+                            onclick="goToDetail('The Apex Performance Jersey', 'Sportswear', '5.00', '../images/shirt18/s1.webp', '../images/shirt18/s2.png', '../images/shirt18/s3.png')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="load-more-container" style="text-align: center; margin-top: 40px;">
+                    <button id="loadMoreBtn" class="order-now-btn">Load More Products</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+<script src="../Javascript/product.js"></script>
+
+</html>
