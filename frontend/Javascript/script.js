@@ -104,7 +104,7 @@ document.getElementById('customForm').addEventListener('submit', async (e) => {
     btn.disabled = true;
 
     try {
-        const response = await fetch('http://localhost:3000/custom-design', {
+        const response = await fetch('/api/custom-design', {
             method: 'POST',
             body: formData // Correctly sends text + image file
         });
@@ -153,7 +153,7 @@ document.getElementById('bulkOrderForm').addEventListener('submit', async (e) =>
     btn.disabled = true;
 
     try {
-        const response = await fetch('http://localhost:3000/bulk-order', {
+        const response = await fetch('/api/bulk-order', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
