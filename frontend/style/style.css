@@ -1440,3 +1440,29 @@ button {
         padding: 8px !important;
     }
 }
+
+.whatsapp-nav-link {
+    display: flex;
+    align-items: center;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.whatsapp-nav-link:hover {
+    background-color: #128C7E; /* Darker WhatsApp Green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Hide text on very small phones to save space if needed */
+@media (max-width: 480px) {
+    .whatsapp-nav-link span {
+        display: none;
+    }
+}

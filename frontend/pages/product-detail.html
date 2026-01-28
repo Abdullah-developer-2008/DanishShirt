@@ -255,146 +255,153 @@
 
     /* --- Product Detail Responsiveness --- */
 
-/* Tablets & Small Desktops */
-@media (max-width: 1100px) {
-    .product-detail-container {
-        padding: 0 20px;
-        margin: 100px auto 50px;
+    /* Tablets & Small Desktops */
+    @media (max-width: 1100px) {
+        .product-detail-container {
+            padding: 0 20px;
+            margin: 100px auto 50px;
+        }
+
+        .detail-layout {
+            gap: 30px;
+            grid-template-columns: 1.1fr 0.9fr;
+        }
+
+        .main-slider-container,
+        .slider-track img {
+            height: 500px;
+            /* Slightly shorter for tablets */
+        }
+
+        .price {
+            font-size: 2rem;
+        }
     }
 
-    .detail-layout {
-        gap: 30px;
-        grid-template-columns: 1.1fr 0.9fr;
+    /* Mobile Devices (Stacking Layout) */
+    @media (max-width: 850px) {
+        .detail-layout {
+            grid-template-columns: 1fr;
+            /* Stack visuals on top of order panel */
+        }
+
+        .product-visuals {
+            position: relative;
+            width: 100%;
+        }
+
+        .main-slider-container,
+        .slider-track img {
+            height: 450px;
+            /* Ideal height for mobile viewing */
+        }
+
+        .product-order-panel {
+            padding-top: 0;
+        }
+
+        .slider-arrow {
+            width: 40px;
+            height: 40px;
+            font-size: 0.8rem;
+        }
     }
 
-    .main-slider-container, 
-    .slider-track img {
-        height: 500px; /* Slightly shorter for tablets */
+    /* Small Phones */
+    @media (max-width: 480px) {
+        .product-detail-container {
+            padding: 0 15px;
+            margin-top: 80px;
+        }
+
+        .main-slider-container,
+        .slider-track img {
+            height: 350px;
+            /* Compact height for small screens */
+        }
+
+        .price {
+            font-size: 1.8rem;
+        }
+
+        .color-options {
+            flex-wrap: wrap;
+            /* Allow colors to wrap if there are many */
+            gap: 10px;
+        }
+
+        .qty-selector {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        #quantityInput {
+            flex-grow: 1;
+            /* Make input wider on mobile for easier typing */
+        }
+
+        .order-now-btn {
+            padding: 18px;
+            font-size: 1rem;
+        }
+
+        .live-total h3 {
+            font-size: 1.5rem;
+        }
     }
 
-    .price {
-        font-size: 2rem;
-    }
-}
+    /* --- Order Modal Responsiveness --- */
 
-/* Mobile Devices (Stacking Layout) */
-@media (max-width: 850px) {
-    .detail-layout {
-        grid-template-columns: 1fr; /* Stack visuals on top of order panel */
-    }
+    /* Tablets and Mobile Devices */
+    @media (max-width: 600px) {
+        #orderModal {
+            /* Ensure the modal is always centered even if the keyboard pops up */
+            padding: 20px !important;
+            align-items: center !important;
+        }
 
-    .product-visuals {
-        position: relative;
-        width: 100%;
-    }
+        #orderModal>div {
+            /* Overriding the fixed 400px width for smaller screens */
+            width: 100% !important;
+            max-width: 350px !important;
+            padding: 30px 20px !important;
+            /* Slightly less padding to save space */
+            border-radius: 12px !important;
+        }
 
-    .main-slider-container, 
-    .slider-track img {
-        height: 450px; /* Ideal height for mobile viewing */
-    }
+        #orderModal h2 {
+            font-size: 1.5rem !important;
+        }
 
-    .product-order-panel {
-        padding-top: 0;
-    }
+        #orderModal p {
+            font-size: 0.85rem !important;
+            margin-bottom: 15px !important;
+        }
 
-    .slider-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 0.8rem;
-    }
-}
+        /* Prevent iOS "Auto-Zoom" on input focus by ensuring 16px font-size */
+        #orderModal input {
+            font-size: 16px !important;
+            padding: 10px !important;
+        }
 
-/* Small Phones */
-@media (max-width: 480px) {
-    .product-detail-container {
-        padding: 0 15px;
-        margin-top: 80px;
-    }
-
-    .main-slider-container, 
-    .slider-track img {
-        height: 350px; /* Compact height for small screens */
+        #orderModal .order-now-btn {
+            padding: 15px !important;
+            font-size: 1rem !important;
+        }
     }
 
-    .price {
-        font-size: 1.8rem;
+    /* Very Small Phones */
+    @media (max-width: 380px) {
+        #orderModal>div {
+            max-width: 100% !important;
+            margin: 0 10px !important;
+        }
     }
-
-    .color-options {
-        flex-wrap: wrap; /* Allow colors to wrap if there are many */
-        gap: 10px;
-    }
-
-    .qty-selector {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    #quantityInput {
-        flex-grow: 1; /* Make input wider on mobile for easier typing */
-    }
-
-    .order-now-btn {
-        padding: 18px;
-        font-size: 1rem;
-    }
-    
-    .live-total h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* --- Order Modal Responsiveness --- */
-
-/* Tablets and Mobile Devices */
-@media (max-width: 600px) {
-    #orderModal {
-        /* Ensure the modal is always centered even if the keyboard pops up */
-        padding: 20px !important;
-        align-items: center !important;
-    }
-
-    #orderModal > div {
-        /* Overriding the fixed 400px width for smaller screens */
-        width: 100% !important;
-        max-width: 350px !important; 
-        padding: 30px 20px !important; /* Slightly less padding to save space */
-        border-radius: 12px !important;
-    }
-
-    #orderModal h2 {
-        font-size: 1.5rem !important;
-    }
-
-    #orderModal p {
-        font-size: 0.85rem !important;
-        margin-bottom: 15px !important;
-    }
-
-    /* Prevent iOS "Auto-Zoom" on input focus by ensuring 16px font-size */
-    #orderModal input {
-        font-size: 16px !important;
-        padding: 10px !important;
-    }
-
-    #orderModal .order-now-btn {
-        padding: 15px !important;
-        font-size: 1rem !important;
-    }
-}
-
-/* Very Small Phones */
-@media (max-width: 380px) {
-    #orderModal > div {
-        max-width: 100% !important;
-        margin: 0 10px !important;
-    }
-}
 </style>
 
 <body>
 
-   <nav id="navbar" class="scrolled">
+    <nav id="navbar" class="scrolled">
         <div class="nav-container">
             <div class="logo">
                 <span class="logo-icon">✧</span> Danish<span class="logo-thin">Shirt</span>
@@ -409,6 +416,12 @@
                 <li><a href="../pages/product.html">Products</a></li>
                 <li><a href="../index.html" id="nav-custom">Customization</a></li>
                 <li><a href="../index.html">Bulk Orders</a></li>
+                <li><a href="https://wa.me/923181561989?text=Hi!%20I'm%20interested%20in%20ordering%20the%20Elite%20Precision%20Training%20Kit."
+                    class="whatsapp-nav-link" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
+                        style="width:20px; vertical-align:middle; margin-right:5px;">
+                    Contact Us
+                </a></li>
             </ul>
         </div>
     </nav>
@@ -511,12 +524,12 @@
     const slides = document.querySelectorAll('.slider-track img');
 
     let index = 0;
-if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-        index = (index + 1) % slides.length;
-        updateSlider();
-    });
-}
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            updateSlider();
+        });
+    }
 
     prevBtn.addEventListener('click', () => {
         index = (index - 1 + slides.length) % slides.length;
